@@ -60,3 +60,35 @@ IMP :: java script is a dynamically types language.
      const bigNumber = 23445678698n;
 */
 
+//***************************************************************************************** */
+
+/*
+        stack(in primitives) and heap(non-primitive) memory
+
+        on use of stack you get a copy
+        in heap you get a reference
+
+*/
+
+let myName = "Bibhuti";
+
+let mySecondName = myName;
+mySecondName = "Bhushan"
+
+
+console.log(myName); //stack
+console.log(mySecondName); // stack
+
+
+let data = {
+    name:"Bibhu",
+    email:"bibhu@gmail.com"
+}
+
+console.log(data.email,"before changes")
+
+let data1 = data;
+data1.email = "bibhuti@gmail.com";
+
+console.log(data1.email, "after changes");
+console.log(data.email,"after changes")
